@@ -1,0 +1,99 @@
+  " General
+autocmd!
+syntax on
+set nu
+" set relativenumber
+set autoread
+set laststatus=2
+set encoding=utf-8
+set t_Co=256
+set background=dark
+
+" Improved Enter
+nmap <S-Enter> O<Esc>
+nmap <CR> o<Esc>
+nnoremap <c-j> <c-w>j
+nnoremap <c-k> <c-w>k
+nnoremap <c-h> <c-w>h
+nnoremap <c-l> <c-w>l
+
+" Leader
+let mapleader=","
+
+set nocompatible
+filetype off
+
+call plug#begin()
+
+" Completion/Code
+" Plug 'maralla/completor.vim'
+" Plug 'w0rp/ale'
+Plug 'davidhalter/jedi-vim'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-commentary'
+Plug 'matze/vim-move'
+" Python
+Plug 'tell-k/vim-autopep8'
+" Latex
+Plug 'lervag/vimtex'
+" Airline
+Plug 'vim-airline/vim-airline'
+Plug 'vim-airline/vim-airline-themes'
+" NerdTree
+Plug 'scrooloose/nerdtree'
+" Ranger
+Plug 'francoiscabrol/ranger.vim'
+" TMUX
+Plug 'tmux-plugins/vim-tmux'
+" Colorschemes
+" Plug 'sjl/badwolf'
+" Plug 'notpratheek/vim-luna'
+" Plug 'altercation/vim-colors-solarized'
+" Plug 'chriskempson/vim-tomorrow-theme'
+" Plug 'joshdick/onedark.vim'
+Plug 'trusktr/seti.vim'
+
+call plug#end()
+filetype plugin indent on
+
+" Indentation
+set tabstop=2
+set shiftwidth=2
+set expandtab
+set smarttab
+
+" Colorschemes and GUI
+if (has("termguicolors"))
+    set termguicolors
+endif
+if has('gui_running')
+  set guifont=Source\ Code\ Pro\ 12
+  set anti enc=utf-8
+endif
+
+colorscheme seti
+" colorscheme onedark
+let g:airline_theme='dark'
+" let g:airline_theme='onedark'
+
+" hide default mode indicator
+set noshowmode
+
+" powerline
+let g:airline_powerline_fonts=1
+let g:airline#extensions#tabline#enabled = 1
+
+" vim-move <C-k> up / <C-j> down
+" <C-k>/<C-j> already in use for window movement, default <A-k>/<A-j>
+" let g:move_key_modifier = 'C'
+
+" Python
+let g:autopep8_on_save = 1
+let g:autopep8_disable_show_diff=1
+let g:autopep8_ignore="E226,E24,W6,E731"
+
+""" NerdTree
+map <C-n> :NERDTreeToggle<CR>
+
+""" Latex
+let g:tex_flavor = 'latex'
