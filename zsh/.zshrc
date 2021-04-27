@@ -119,3 +119,5 @@ source /usr/local/opt/powerlevel10k/powerlevel10k.zsh-theme
 for f in ~/.zsh.d/*.zsh; do
   source "$f"
 done
+
+[ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
