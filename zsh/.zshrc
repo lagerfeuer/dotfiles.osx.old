@@ -121,3 +121,4 @@ for f in ~/.zsh.d/*.zsh; do
 done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
+
