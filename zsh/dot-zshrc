@@ -78,7 +78,7 @@ export ZSH="/Users/deutzluk/.oh-my-zsh"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(aws git)
+plugins=(aws colored-man-pages docker git zsh-syntax-highlighting)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -122,3 +122,13 @@ done
 
 [ -f ~/.fzf.zsh ] && source ~/.fzf.zsh
 
+
+# tabtab source for serverless package
+# uninstall by removing these lines or running `tabtab uninstall serverless`
+[[ -f /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/serverless.zsh ]] && . /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/serverless.zsh
+# tabtab source for sls package
+# uninstall by removing these lines or running `tabtab uninstall sls`
+[[ -f /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/sls.zsh ]] && . /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/sls.zsh
+# tabtab source for slss package
+# uninstall by removing these lines or running `tabtab uninstall slss`
+[[ -f /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/slss.zsh ]] && . /Users/deutzluk/Work/lambdas/cf-static-site-origin-response/node_modules/tabtab/.completions/slss.zsh

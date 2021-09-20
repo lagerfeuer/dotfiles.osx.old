@@ -17,3 +17,5 @@ function shellcheck-buildspec {
     yq e '.phases.[].commands.[]' "${spec}" | shellcheck --exclude=SC2148 -
   done
 }
+
+alias dotenv='set -o allexport; source .env; set +o allexport'

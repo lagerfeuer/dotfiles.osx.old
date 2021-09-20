@@ -8,7 +8,7 @@ function aws-assume-role {
 	local readonly role="$1"
 	local time="${2:-3600}"
 	if [[ "$(agp)" != "${role}" ]] then
-		( mfa 3>&1 | head -n 1 ; echo "3600" ) | acp "${role}"
+		( mfa | head -n 1 ; echo "${time}" ) | acp "${role}" >/dev/null
 	fi
 }
 
