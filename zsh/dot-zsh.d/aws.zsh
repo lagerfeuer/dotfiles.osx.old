@@ -27,3 +27,7 @@ function s3json {
   local readonly S3_ARN="${1}"
   aws s3 cp "${S3_ARN}" - | jq -r . | bat -l=json
 }
+
+alias aws-get-id='aws sts get-caller-identity | jq .'
+alias aws-roles='awk '\''/\[profile [a-z]/ { print $2 }'\'' $HOME/.aws/config |tr -d \]'
+
