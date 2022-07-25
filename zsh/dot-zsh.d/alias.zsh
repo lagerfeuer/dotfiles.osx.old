@@ -19,3 +19,8 @@ function shellcheck-buildspec {
 }
 
 alias dotenv='set -o allexport; source .env; set +o allexport'
+
+# PATHS
+alias infra-live='$HOME/Work/infrastructure-live'
+alias infra-modules='$HOME/Work/infrastructure-modules'
+
