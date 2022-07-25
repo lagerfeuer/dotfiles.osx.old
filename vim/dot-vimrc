@@ -53,6 +53,9 @@ Plug 'tmux-plugins/vim-tmux'
 " Plug 'joshdick/onedark.vim'
 Plug 'trusktr/seti.vim'
 
+" Random
+Plug 'martinda/Jenkinsfile-vim-syntax'
+
 call plug#end()
 filetype plugin indent on
 
